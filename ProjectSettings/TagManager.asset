@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - grabbable
+  - dropoff
   layers:
   - Default
   - TransparentFX
@@ -42,9 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Foreground
-    uniqueID: 3215295485
-    locked: 0
   - name: Background
     uniqueID: 20327089
+    locked: 0
+  - name: Foreground
+    uniqueID: 3215295485
     locked: 0
