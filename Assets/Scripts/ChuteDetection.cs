@@ -24,6 +24,9 @@ public class ChuteDetection : MonoBehaviour
             hingeJoint2D.enabled = false;
             hingeJoint2D.connectedBody = null;
 
+            print(objSortingVal);
+            print(sortingIndex);
+
             if (objSortingVal == sortingIndex)
             {
                 // object is sorted correctly
