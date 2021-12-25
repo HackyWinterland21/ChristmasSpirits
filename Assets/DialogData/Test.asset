@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02096d34b5a5f32448c821a167eddae7, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
+  dialog:
+  - According to all known laws of aviation
+  - There is no way a bee should be able to fly
+  - The bee of course files anyways lmao
