@@ -25,20 +25,19 @@ public class PlayerMovement : MonoBehaviour
         // move character left and right
         rb2D.velocity = new Vector2(horizontalInput * movementSpeed, verticalInput * movementSpeed);
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            grabbing = !grabbing;
-            print("toggled");
-
-            print(grabbedObject);
+        if (Input.GetKeyDown(KeyCode.Space)) { 
+        
             if (grabbedObject != null)
             {
-                print("here");
                 HingeJoint2D hingeJoint2D = grabbedObject.GetComponent<HingeJoint2D>();
                 hingeJoint2D.connectedBody = null;
                 hingeJoint2D.enabled = false;
                 grabbedObject = null;
-
+                grabbing = false;
+            }
+            else
+            {
+                grabbing = !grabbing;
             }
         } 
     }
@@ -53,10 +52,11 @@ public class PlayerMovement : MonoBehaviour
             HingeJoint2D hingeJoint2D = collision.gameObject.GetComponent<HingeJoint2D>();
             if (!hingeJoint2D.enabled)
             {
+                grabbing = false;
                 grabbedObject = collision.gameObject;
                 hingeJoint2D.enabled = true;
                 hingeJoint2D.connectedBody = rb2D;
-
+                hingeJoint2D.connectedAnchor = new Vector2(rb2D.position.x, rb2D.position.y);
             }
 
         }
