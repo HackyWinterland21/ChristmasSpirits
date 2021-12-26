@@ -5,11 +5,15 @@ using UnityEngine;
 public class CandleLight : MonoBehaviour
 {
     private Light candleFlame;
+    private SpriteRenderer spriteRenderer;
+    private GameObject candleFlameFire;
 
     // Start is called before the first frame update
     void Start()
     {
         candleFlame = GetComponent<Light>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        candleFlameFire = transform.Find("Flame").gameObject;
     }
 
     // Update is called once per frame
@@ -25,6 +29,8 @@ public class CandleLight : MonoBehaviour
             if (playerLighting.PlayerCandleFlame)
             {
                 candleFlame.enabled = true;
+                spriteRenderer.color = Color.white;
+                candleFlameFire.SetActive(true);
             }
         }
     }
