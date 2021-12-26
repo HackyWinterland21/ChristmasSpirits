@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChuteDetection : MonoBehaviour
 {
     [SerializeField] private int sortingIndex;
     [SerializeField] private GameObject objRespawnPoint;
+    public static int numPackages;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        numPackages = 10;
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -32,6 +34,11 @@ public class ChuteDetection : MonoBehaviour
                 // object is sorted correctly
                 // remove it from the scene
                 Destroy(collision.gameObject);
+                numPackages--;
+                if (numPackages == 0)
+                {
+                    StartCoroutine(FinishSorting());
+                }
             } else
             {
                 // object is sorted incorrectly
@@ -39,5 +46,13 @@ public class ChuteDetection : MonoBehaviour
                 collision.gameObject.transform.position = new Vector3(objRespawnPoint.transform.position.x, objRespawnPoint.transform.position.y, objRespawnPoint.transform.position.z);
             }
         }
+    }
+
+    private IEnumerator FinishSorting()
+    {
+        yield return new WaitForSeconds(2); // Wait a couple seconds before the typing starts
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        yield return null;
     }
 }

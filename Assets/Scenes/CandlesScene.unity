@@ -413,6 +413,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 739331022}
     m_Modifications:
+    - target: {fileID: 1914986183763015708, guid: 27f6263952d62e14f8e3f51389fc11e0, type: 3}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 22006842}
     - target: {fileID: 1914986183763015710, guid: 27f6263952d62e14f8e3f51389fc11e0, type: 3}
       propertyPath: m_Name
       value: Candle (2)
@@ -470,6 +474,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 739331022}
     m_Modifications:
+    - target: {fileID: 1914986183763015708, guid: 27f6263952d62e14f8e3f51389fc11e0, type: 3}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 22006842}
     - target: {fileID: 1914986183763015710, guid: 27f6263952d62e14f8e3f51389fc11e0, type: 3}
       propertyPath: m_Name
       value: Candle (2)
@@ -532,6 +540,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 739331022}
     m_Modifications:
+    - target: {fileID: 1914986183763015708, guid: 27f6263952d62e14f8e3f51389fc11e0, type: 3}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 22006842}
     - target: {fileID: 1914986183763015710, guid: 27f6263952d62e14f8e3f51389fc11e0, type: 3}
       propertyPath: m_Name
       value: Candle
@@ -701,6 +713,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 739331022}
     m_Modifications:
+    - target: {fileID: 1914986183763015708, guid: 27f6263952d62e14f8e3f51389fc11e0, type: 3}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 22006842}
     - target: {fileID: 1914986183763015710, guid: 27f6263952d62e14f8e3f51389fc11e0, type: 3}
       propertyPath: m_Name
       value: Candle (1)
@@ -758,6 +774,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 739331022}
     m_Modifications:
+    - target: {fileID: 1914986183763015708, guid: 27f6263952d62e14f8e3f51389fc11e0, type: 3}
+      propertyPath: background
+      value: 
+      objectReference: {fileID: 22006842}
     - target: {fileID: 1914986183763015710, guid: 27f6263952d62e14f8e3f51389fc11e0, type: 3}
       propertyPath: m_Name
       value: Candle
