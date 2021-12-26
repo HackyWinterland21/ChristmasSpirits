@@ -37,6 +37,9 @@ public class PresentDropOff : MonoBehaviour
     private IEnumerator nextHouse()
     {
         print("presents delivered");
+        GameObject childObject = transform.Find("TargetParticles").gameObject;
+        childObject.SetActive(false);
+
         yield return new WaitForSeconds(2); // Wait a couple seconds before the typing starts
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
